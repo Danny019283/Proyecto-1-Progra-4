@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: productosdb
+      MYSQL_USER: danny
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
+
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+
+  frontend:
+    build: ./client
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    depends_on:
+      - backend
