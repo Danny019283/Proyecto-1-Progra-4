@@ -1,1 +1,9 @@
 venv/
+client/node_modules/
+client/dist/
+client/build/
+client/.vite/
+client/coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

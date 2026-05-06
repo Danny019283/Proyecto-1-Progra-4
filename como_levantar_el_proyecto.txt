@@ -1,0 +1,8 @@
+# 1. Entrar a la carpeta del proyecto
+cd /ruta/al/proyecto-1-progra-4
+
+# 2. Construir las imágenes (primera vez o si cambia Dockerfile/requirements)
+docker compose build
+
+# 3. Levantar todos los servicios
+docker compose up
