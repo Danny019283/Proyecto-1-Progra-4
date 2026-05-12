@@ -1,14 +1,15 @@
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-export function Navigation() { 
+export function Navigation() {
   return (
-    <div>
-        <Link to="/productos">
-        <h1>App de Productos</h1>
-        </Link>
-        <Link to="/productos-create">create producto</Link>
-    </div>
-  )
+    <nav className="navbar">
+      <Link to="/productos" className="logo">
+        App de Productos
+      </Link>
+
+      <Link to="/productos-create" className="btn">
+        Crear producto
+      </Link>
+    </nav>
+  );
 }
-
-
